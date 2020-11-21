@@ -520,6 +520,7 @@ div.detalle-evento p {
 @media (min-width: 480px) {
     .lista-invitados li {
         width: 50%;
+        float: left;
     }
 }
 
