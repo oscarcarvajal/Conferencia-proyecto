@@ -2,6 +2,17 @@
     "use strict";
     var regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function() {
+        var map = L.map('mapa').setView([33.795733, -117.897248], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([33.795733, -117.897248]).addTo(map)
+            .bindPopup('ProyectoGDL 2020, <br> Boletos ya disponibles')
+            .openPopup()
+            .bindTooltip('un Tooltip')
+            .openTooltip();
         //Campos Datos usuarios
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');
